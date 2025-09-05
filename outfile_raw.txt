@@ -1,0 +1,22 @@
+(node:5944) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  console.log
+    react-redux [ 1028, 1010, 1010, 1010, 1009 ]
+
+      at Object.log (__tests__/all_spec.js:141:19)
+
+  console.log
+    zustand [ 1013, 1010, 1010, 1010, 1010 ]
+
+      at Object.log (__tests__/all_spec.js:141:19)
+
+  console.log
+    react-tracked [ 7, 128, 173, 187, 183 ]
+
+      at Object.log (__tests__/all_spec.js:141:19)
+
+  console.log
+    constate [ 7, 170, 183, 183, 184 ]
+
+      at Object.log (__tests__/all_spec.js:141:19)
+

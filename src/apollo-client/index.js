@@ -3,12 +3,10 @@ import {
   ApolloClient,
   gql,
   InMemoryCache,
-  makeVar,
-} from '@apollo/client';
-import {
   ApolloProvider,
   useQuery,
-} from '@apollo/client/react';
+  makeVar,
+} from '@apollo/client';
 
 import {
   reducer,
