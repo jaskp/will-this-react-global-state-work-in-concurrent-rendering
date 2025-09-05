@@ -3,7 +3,7 @@ import {
   QueryClient,
   QueryClientProvider,
   useQuery, useQueryClient,
-} from 'react-query';
+} from '@tanstack/react-query';
 
 import {
   reducer,
