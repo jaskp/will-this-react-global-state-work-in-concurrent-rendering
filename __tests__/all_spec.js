@@ -14,9 +14,9 @@ const sleep = (ms) => new Promise((r) => {
 jest.setTimeout(20 * 1000);
 
 const names = [
-  'zustand',
-  'jotai',
-  'use-atom',
+  'react-query',
+  'apollo-client',
+  'use-context-selector',
 ];
 
 names.forEach((name) => {
