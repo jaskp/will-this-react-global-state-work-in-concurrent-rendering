@@ -1,82 +1,155 @@
-(node:3752) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(node:3762) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
 (Use `node --trace-deprecation ...` to show where the warning was created)
   console.log
-    zustand [ 1027, 1010, 1010, 1010, 1008 ]
+    apollo-client [ 8, 946, 934, 932, 949 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
   console.log
-    jotai [ 8, 164, 183, 182, 182 ]
+    use-context-selector [ 6, 165, 182, 183, 142 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
-  console.log
-    use-atom [ 29, 143, 165, 183, 184 ]
-
-      at Object.log (__tests__/all_spec.js:124:19)
-
-FAIL __tests__/all_spec.js (263.805 s)
-  zustand
+FAIL __tests__/all_spec.js (178.756 s)
+  react-query
     With useTransition
       Level 1
-        ✓ No tearing finally on update (8732 ms)
-        ✓ No tearing finally on mount (4542 ms)
+        ✕ No tearing finally on update (1566 ms)
+        ✕ No tearing finally on mount (1191 ms)
       Level 2
-        ✓ No tearing temporarily on update (12726 ms)
-        ✓ No tearing temporarily on mount (4386 ms)
+        ✕ No tearing temporarily on update (1123 ms)
+        ✕ No tearing temporarily on mount (1124 ms)
       Level 3
-        ✕ Can interrupt render (time slicing) (7749 ms)
-        ✕ Can branch state (wip state) (6427 ms)
+        ✕ Can interrupt render (time slicing) (1120 ms)
+        ✕ Can branch state (wip state) (1119 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (9380 ms)
-        ✓ No tearing finally on mount (4398 ms)
+        ✕ No tearing finally on update (1122 ms)
+        ✕ No tearing finally on mount (1124 ms)
       Level 2
-        ✓ No tearing temporarily on update (13419 ms)
-        ✓ No tearing temporarily on mount (4427 ms)
-  jotai
+        ✕ No tearing temporarily on update (1141 ms)
+        ✕ No tearing temporarily on mount (1135 ms)
+  apollo-client
     With useTransition
       Level 1
-        ✓ No tearing finally on update (5373 ms)
-        ✓ No tearing finally on mount (9382 ms)
+        ✓ No tearing finally on update (7731 ms)
+        ✓ No tearing finally on mount (4538 ms)
       Level 2
-        ✓ No tearing temporarily on update (9382 ms)
-        ✕ No tearing temporarily on mount (8299 ms)
+        ✕ No tearing temporarily on update (11506 ms)
+        ✓ No tearing temporarily on mount (4426 ms)
       Level 3
-        ✓ Can interrupt render (time slicing) (4401 ms)
-        ✕ Can branch state (wip state) (9965 ms)
+        ✕ Can interrupt render (time slicing) (6964 ms)
+        ✕ Can branch state (wip state) (3344 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (10361 ms)
-        ✓ No tearing finally on mount (5555 ms)
+        ✓ No tearing finally on update (8999 ms)
+        ✓ No tearing finally on mount (4461 ms)
       Level 2
-        ✓ No tearing temporarily on update (14430 ms)
-        ✕ No tearing temporarily on mount (5433 ms)
-  use-atom
+        ✓ No tearing temporarily on update (12249 ms)
+        ✓ No tearing temporarily on mount (4418 ms)
+  use-context-selector
     With useTransition
       Level 1
-        ✓ No tearing finally on update (6384 ms)
-        ✓ No tearing finally on mount (13365 ms)
+        ✓ No tearing finally on update (5357 ms)
+        ✓ No tearing finally on mount (13401 ms)
       Level 2
-        ✓ No tearing temporarily on update (9390 ms)
-        ✓ No tearing temporarily on mount (13284 ms)
+        ✓ No tearing temporarily on update (8351 ms)
+        ✓ No tearing temporarily on mount (13295 ms)
       Level 3
-        ✓ Can interrupt render (time slicing) (4397 ms)
-        ✓ Can branch state (wip state) (8907 ms)
+        ✓ Can interrupt render (time slicing) (3370 ms)
+        ✓ Can branch state (wip state) (7875 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (15385 ms)
-        ✓ No tearing finally on mount (6378 ms)
+        ✓ No tearing finally on update (14340 ms)
+        ✓ No tearing finally on mount (6388 ms)
       Level 2
-        ✓ No tearing temporarily on update (19446 ms)
-        ✓ No tearing temporarily on mount (6285 ms)
+        ✓ No tearing temporarily on update (18457 ms)
+        ✓ No tearing temporarily on mount (6289 ms)
 
-  ● zustand › With useTransition › Level 3 › Can interrupt render (time slicing)
+  ● react-query › With useTransition › Level 1 › No tearing finally on update
+
+
+
+
+
+  ● react-query › With useTransition › Level 1 › No tearing finally on mount
+
+
+
+
+
+  ● react-query › With useTransition › Level 2 › No tearing temporarily on update
+
+
+
+
+
+  ● react-query › With useTransition › Level 2 › No tearing temporarily on mount
+
+
+
+
+
+  ● react-query › With useTransition › Level 3 › Can interrupt render (time slicing)
+
+
+
+
+
+  ● react-query › With useTransition › Level 3 › Can branch state (wip state)
+
+
+
+
+
+  ● react-query › With useDeferredValue › Level 1 › No tearing finally on update
+
+
+
+
+
+  ● react-query › With useDeferredValue › Level 1 › No tearing finally on mount
+
+
+
+
+
+  ● react-query › With useDeferredValue › Level 2 › No tearing temporarily on update
+
+
+
+
+
+  ● react-query › With useDeferredValue › Level 2 › No tearing temporarily on mount
+
+
+
+
+
+  ● apollo-client › With useTransition › Level 2 › No tearing temporarily on update
+
+    expect(received).resolves.not.toMatch(expected)
+
+    Expected pattern: not /TEARED/
+    Received string:      "apollo-client TEARED TEARED TEARED TEARED TEARED"
+
+      89 |           // check if there's inconsistency during update
+      90 |           // see useCheckTearing() in src/common.js
+    > 91 |           await expect(page.title()).resolves.not.toMatch(/TEARED/);
+         |                                                   ^
+      92 |         });
+      93 |
+      94 |         it('No tearing temporarily on mount', async () => {
+
+      at Object.toMatch (node_modules/expect/build/index.js:166:22)
+      at Object.toMatch (__tests__/all_spec.js:91:51)
+
+  ● apollo-client › With useTransition › Level 3 › Can interrupt render (time slicing)
 
     expect(received).toBeLessThan(expected)
 
     Expected: < 300
-    Received:   1013
+    Received:   753.8
 
       127 |           // it triggers triple clicks, so 300ms on average.
       128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
@@ -88,77 +161,27 @@ FAIL __tests__/all_spec.js (263.805 s)
 
       at Object.toBeLessThan (__tests__/all_spec.js:129:23)
 
-  ● zustand › With useTransition › Level 3 › Can branch state (wip state)
+  ● apollo-client › With useTransition › Level 3 › Can branch state (wip state)
 
-    TimeoutError: Element #pending (text: "Pending...") not found
-    waiting for function failed: timeout 2000ms exceeded
+    expect(received).resolves.toBe(expected) // Object.is equality
 
-      143 |           await page.click('#transitionIncrement');
-      144 |           // wait for pending
-    > 145 |           await expect(page).toMatchElement('#pending', {
-          |           ^
-      146 |             text: 'Pending...',
-      147 |             timeout: 2 * 1000,
+    Expected: "1"
+    Received: "2"
+
       148 |           });
+      149 |           // Make sure that while isPending true, previous state displayed
+    > 150 |           await expect(page.evaluate(() => document.querySelector('#mainCount').innerHTML)).resolves.toBe('1');
+          |                                                                                                      ^
+      151 |           await expect(page.evaluate(() => document.querySelector('.count:first-of-type').innerHTML)).resolves.toBe('1');
+      152 |           // click normal double button
+      153 |           await page.click('#normalDouble');
 
-      at Object.<anonymous> (__tests__/all_spec.js:145:11)
-
-  ● jotai › With useTransition › Level 2 › No tearing temporarily on mount
-
-    expect(received).resolves.not.toMatch(expected)
-
-    Expected pattern: not /TEARED/
-    Received string:      "jotai TEARED"
-
-      101 |           // check if there's inconsistency during update
-      102 |           // see useCheckTearing() in src/common.js
-    > 103 |           await expect(page.title()).resolves.not.toMatch(/TEARED/);
-          |                                                   ^
-      104 |         });
-      105 |       });
-      106 |
-
-      at Object.toMatch (node_modules/expect/build/index.js:166:22)
-      at Object.toMatch (__tests__/all_spec.js:103:51)
-
-  ● jotai › With useTransition › Level 3 › Can branch state (wip state)
-
-    TimeoutError: Element .count:nth-of-type(1) (text: "2") not found
-    waiting for function failed: timeout 5000ms exceeded
-
-      154 |           // check if all counts become doubled before increment
-      155 |           await Promise.all(ids.map(async (i) => {
-    > 156 |             await expect(page).toMatchElement(`.count:nth-of-type(${i + 1})`, {
-          |             ^
-      157 |               text: '2',
-      158 |               timeout: 5 * 1000,
-      159 |             });
-
-      at __tests__/all_spec.js:156:13
-          at async Promise.all (index 0)
-      at Object.<anonymous> (__tests__/all_spec.js:155:11)
-
-  ● jotai › With useDeferredValue › Level 2 › No tearing temporarily on mount
-
-    expect(received).resolves.not.toMatch(expected)
-
-    Expected pattern: not /TEARED/
-    Received string:      "jotai TEARED TEARED"
-
-      240 |           // check if there's inconsistency during update
-      241 |           // see useCheckTearing() in src/common.js
-    > 242 |           await expect(page.title()).resolves.not.toMatch(/TEARED/);
-          |                                                   ^
-      243 |         });
-      244 |       });
-      245 |     });
-
-      at Object.toMatch (node_modules/expect/build/index.js:166:22)
-      at Object.toMatch (__tests__/all_spec.js:242:51)
+      at Object.toBe (node_modules/expect/build/index.js:166:22)
+      at Object.toBe (__tests__/all_spec.js:150:102)
 
 Test Suites: 1 failed, 1 total
-Tests:       5 failed, 25 passed, 30 total
+Tests:       13 failed, 17 passed, 30 total
 Snapshots:   0 total
-Time:        263.846 s
+Time:        178.796 s
 Ran all test suites.
 Test results written to: outfile.json

@@ -90,22 +90,22 @@ yarn jest:update
 
 ```
  at Object.log (__tests__/all_spec.js:124:19)
-tand
-   ✓ No tearing finally on update (8732 ms)
-   ✓ No tearing temporarily on update (12726 ms)
-   ✕ Can interrupt render (time slicing) (7749 ms)
+ct-query
+   ✕ No tearing finally on update (1566 ms)
+   ✕ No tearing temporarily on update (1123 ms)
+   ✕ Can interrupt render (time slicing) (1120 ms)
  Level 1
  Level 2
-ai
-   ✓ No tearing finally on update (5373 ms)
-   ✓ No tearing temporarily on update (9382 ms)
-   ✓ Can interrupt render (time slicing) (4401 ms)
+llo-client
+   ✓ No tearing finally on update (7731 ms)
+   ✕ No tearing temporarily on update (11506 ms)
+   ✕ Can interrupt render (time slicing) (6964 ms)
  Level 1
  Level 2
--atom
-   ✓ No tearing finally on update (6384 ms)
-   ✓ No tearing temporarily on update (9390 ms)
-   ✓ Can interrupt render (time slicing) (4397 ms)
+-context-selector
+   ✓ No tearing finally on update (5357 ms)
+   ✓ No tearing temporarily on update (8351 ms)
+   ✓ Can interrupt render (time slicing) (3370 ms)
  Level 1
  Level 2
 
@@ -115,10 +115,23 @@ ai
 <table>
 <tr><th>Test</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
 	<tr>
-		<th><a href="https://github.com/pmndrs/zustand">zustand</a></th>
+		<th><a href="https://react-query.tanstack.com/">react-query</a></th>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+		<td>:x:</td>
+	</tr>
+	<tr>
+		<th><a href="https://github.com/apollographql/apollo-client">apollo-client</a></th>
 		<td>:white_check_mark:</td>
 		<td>:white_check_mark:</td>
-		<td>:white_check_mark:</td>
+		<td>:x:</td>
 		<td>:white_check_mark:</td>
 		<td>:x:</td>
 		<td>:x:</td>
@@ -128,20 +141,7 @@ ai
 		<td>:white_check_mark:</td>
 	</tr>
 	<tr>
-		<th><a href="https://github.com/pmndrs/jotai">jotai</a></th>
-		<td>:white_check_mark:</td>
-		<td>:white_check_mark:</td>
-		<td>:white_check_mark:</td>
-		<td>:x:</td>
-		<td>:white_check_mark:</td>
-		<td>:x:</td>
-		<td>:white_check_mark:</td>
-		<td>:white_check_mark:</td>
-		<td>:white_check_mark:</td>
-		<td>:x:</td>
-	</tr>
-	<tr>
-		<th><a href="https://github.com/dai-shi/use-atom">use-atom</a></th>
+		<th><a href="https://github.com/dai-shi/use-context-selector">use-context-selector</a> (w/ useReducer)</th>
 		<td>:white_check_mark:</td>
 		<td>:white_check_mark:</td>
 		<td>:white_check_mark:</td>
