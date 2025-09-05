@@ -50,6 +50,7 @@
     "@simplux/core": "^0.18.0",
     "@simplux/react": "^0.18.0",
     "@tanstack/react-query": "^5.86.0",
+    "ajv": "^8.17.1",
     "constate": "^3.3.3",
     "effector": "^22.8.8",
     "effector-react": "^22.5.4",

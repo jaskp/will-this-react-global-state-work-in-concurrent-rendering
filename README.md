@@ -91,21 +91,21 @@ yarn jest:update
 ```
  at Object.log (__tests__/all_spec.js:124:19)
 ct-query
-   ✕ No tearing finally on update (1566 ms)
-   ✕ No tearing temporarily on update (1123 ms)
-   ✕ Can interrupt render (time slicing) (1120 ms)
+   ✕ No tearing finally on update (1626 ms)
+   ✕ No tearing temporarily on update (1124 ms)
+   ✕ Can interrupt render (time slicing) (1099 ms)
  Level 1
  Level 2
 llo-client
-   ✓ No tearing finally on update (7731 ms)
-   ✕ No tearing temporarily on update (11506 ms)
-   ✕ Can interrupt render (time slicing) (6964 ms)
+   ✓ No tearing finally on update (7797 ms)
+   ✕ No tearing temporarily on update (11501 ms)
+   ✕ Can interrupt render (time slicing) (7027 ms)
  Level 1
  Level 2
 -context-selector
-   ✓ No tearing finally on update (5357 ms)
-   ✓ No tearing temporarily on update (8351 ms)
-   ✓ Can interrupt render (time slicing) (3370 ms)
+   ✓ No tearing finally on update (5437 ms)
+   ✓ No tearing temporarily on update (8432 ms)
+   ✓ Can interrupt render (time slicing) (3442 ms)
  Level 1
  Level 2
 

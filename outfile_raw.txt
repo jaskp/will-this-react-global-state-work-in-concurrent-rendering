@@ -1,70 +1,68 @@
-(node:3762) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
-(Use `node --trace-deprecation ...` to show where the warning was created)
   console.log
-    apollo-client [ 8, 946, 934, 932, 949 ]
+    apollo-client [ 7, 939, 950, 949, 950 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
   console.log
-    use-context-selector [ 6, 165, 182, 183, 142 ]
+    use-context-selector [ 27, 163, 179, 185, 183 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
-FAIL __tests__/all_spec.js (178.756 s)
+FAIL __tests__/all_spec.js (180.684 s)
   react-query
     With useTransition
       Level 1
-        ✕ No tearing finally on update (1566 ms)
-        ✕ No tearing finally on mount (1191 ms)
+        ✕ No tearing finally on update (1626 ms)
+        ✕ No tearing finally on mount (1212 ms)
       Level 2
-        ✕ No tearing temporarily on update (1123 ms)
-        ✕ No tearing temporarily on mount (1124 ms)
+        ✕ No tearing temporarily on update (1124 ms)
+        ✕ No tearing temporarily on mount (1125 ms)
       Level 3
-        ✕ Can interrupt render (time slicing) (1120 ms)
-        ✕ Can branch state (wip state) (1119 ms)
+        ✕ Can interrupt render (time slicing) (1099 ms)
+        ✕ Can branch state (wip state) (1126 ms)
     With useDeferredValue
       Level 1
-        ✕ No tearing finally on update (1122 ms)
-        ✕ No tearing finally on mount (1124 ms)
+        ✕ No tearing finally on update (1128 ms)
+        ✕ No tearing finally on mount (1137 ms)
       Level 2
-        ✕ No tearing temporarily on update (1141 ms)
-        ✕ No tearing temporarily on mount (1135 ms)
+        ✕ No tearing temporarily on update (1131 ms)
+        ✕ No tearing temporarily on mount (1104 ms)
   apollo-client
     With useTransition
       Level 1
-        ✓ No tearing finally on update (7731 ms)
-        ✓ No tearing finally on mount (4538 ms)
+        ✓ No tearing finally on update (7797 ms)
+        ✓ No tearing finally on mount (4549 ms)
       Level 2
-        ✕ No tearing temporarily on update (11506 ms)
-        ✓ No tearing temporarily on mount (4426 ms)
+        ✕ No tearing temporarily on update (11501 ms)
+        ✓ No tearing temporarily on mount (4394 ms)
       Level 3
-        ✕ Can interrupt render (time slicing) (6964 ms)
-        ✕ Can branch state (wip state) (3344 ms)
+        ✕ Can interrupt render (time slicing) (7027 ms)
+        ✕ Can branch state (wip state) (3413 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (8999 ms)
+        ✓ No tearing finally on update (8992 ms)
         ✓ No tearing finally on mount (4461 ms)
       Level 2
-        ✓ No tearing temporarily on update (12249 ms)
-        ✓ No tearing temporarily on mount (4418 ms)
+        ✓ No tearing temporarily on update (13321 ms)
+        ✓ No tearing temporarily on mount (4389 ms)
   use-context-selector
     With useTransition
       Level 1
-        ✓ No tearing finally on update (5357 ms)
-        ✓ No tearing finally on mount (13401 ms)
+        ✓ No tearing finally on update (5437 ms)
+        ✓ No tearing finally on mount (13432 ms)
       Level 2
-        ✓ No tearing temporarily on update (8351 ms)
-        ✓ No tearing temporarily on mount (13295 ms)
+        ✓ No tearing temporarily on update (8432 ms)
+        ✓ No tearing temporarily on mount (13301 ms)
       Level 3
-        ✓ Can interrupt render (time slicing) (3370 ms)
-        ✓ Can branch state (wip state) (7875 ms)
+        ✓ Can interrupt render (time slicing) (3442 ms)
+        ✓ Can branch state (wip state) (7876 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (14340 ms)
-        ✓ No tearing finally on mount (6388 ms)
+        ✓ No tearing finally on update (14337 ms)
+        ✓ No tearing finally on mount (6391 ms)
       Level 2
-        ✓ No tearing temporarily on update (18457 ms)
-        ✓ No tearing temporarily on mount (6289 ms)
+        ✓ No tearing temporarily on update (18455 ms)
+        ✓ No tearing temporarily on mount (6306 ms)
 
   ● react-query › With useTransition › Level 1 › No tearing finally on update
 
@@ -149,7 +147,7 @@ FAIL __tests__/all_spec.js (178.756 s)
     expect(received).toBeLessThan(expected)
 
     Expected: < 300
-    Received:   753.8
+    Received:   759
 
       127 |           // it triggers triple clicks, so 300ms on average.
       128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
@@ -182,6 +180,6 @@ FAIL __tests__/all_spec.js (178.756 s)
 Test Suites: 1 failed, 1 total
 Tests:       13 failed, 17 passed, 30 total
 Snapshots:   0 total
-Time:        178.796 s
+Time:        180.74 s
 Ran all test suites.
 Test results written to: outfile.json
