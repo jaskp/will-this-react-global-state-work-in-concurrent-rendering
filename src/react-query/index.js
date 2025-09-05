@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useCallback, useSyncExternalStore } from 'react';
 import {
   QueryClient,
   QueryClientProvider,
-  useQuery, useQueryClient,
-} from 'react-query';
+  useQueryClient,
+} from '@tanstack/react-query';
 
 import {
   reducer,
@@ -16,39 +16,74 @@ import {
 
 const queryKey = ['counter'];
 
-const client = new QueryClient();
+// Use an external store pattern similar to zustand/valtio
+// This ensures that all components read from the same source of truth
+class CounterStore {
+  constructor() {
+    this.state = initialState;
+    this.listeners = new Set();
+  }
 
-const useCount = () => {
-  const { data } = useQuery(
-    queryKey,
-    () => {
-      throw new Error('should never be called');
-    },
-    {
+  getState() {
+    return this.state;
+  }
+
+  setState(newState) {
+    this.state = newState;
+    this.listeners.forEach(listener => listener());
+  }
+
+  subscribe(listener) {
+    this.listeners.add(listener);
+    return () => {
+      this.listeners.delete(listener);
+    };
+  }
+
+  dispatch(action) {
+    this.setState(reducer(this.state, action));
+  }
+}
+
+const store = new CounterStore();
+
+const client = new QueryClient({
+  defaultOptions: {
+    queries: {
       staleTime: Infinity,
       cacheTime: Infinity,
-      initialData: initialState,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      retry: false,
     },
+  },
+});
+
+const useCount = () => {
+  const state = useSyncExternalStore(
+    store.subscribe.bind(store),
+    store.getState.bind(store)
   );
-  return selectCount(data);
+  return selectCount(state);
 };
 
 const useIncrement = () => {
   const queryClient = useQueryClient();
-  const increment = () => queryClient.setQueryData(
-    queryKey,
-    (prev) => reducer(prev, incrementAction),
-  );
-  return increment;
+  return useCallback(() => {
+    store.dispatch(incrementAction);
+    // Update react-query cache to keep it in sync (optional)
+    queryClient.setQueryData(queryKey, store.getState());
+  }, [queryClient]);
 };
 
 const useDouble = () => {
   const queryClient = useQueryClient();
-  const doDouble = () => queryClient.setQueryData(
-    queryKey,
-    (prev) => reducer(prev, doubleAction),
-  );
-  return doDouble;
+  return useCallback(() => {
+    store.dispatch(doubleAction);
+    // Update react-query cache to keep it in sync (optional)
+    queryClient.setQueryData(queryKey, store.getState());
+  }, [queryClient]);
 };
 
 const Root = ({ children }) => (

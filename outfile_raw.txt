@@ -1,0 +1,162 @@
+  console.log
+    react-query [ 1012, 1009, 1008, 1008, 1007 ]
+
+      at Object.log (__tests__/all_spec.js:124:19)
+
+  console.log
+    apollo-client [ 8, 946, 933, 934, 934 ]
+
+      at Object.log (__tests__/all_spec.js:124:19)
+
+  console.log
+    use-context-selector [ 6, 164, 182, 142, 174 ]
+
+      at Object.log (__tests__/all_spec.js:124:19)
+
+FAIL __tests__/all_spec.js (242.639 s)
+  react-query
+    With useTransition
+      Level 1
+        ✓ No tearing finally on update (8325 ms)
+        ✓ No tearing finally on mount (4507 ms)
+      Level 2
+        ✓ No tearing temporarily on update (12737 ms)
+        ✓ No tearing temporarily on mount (4392 ms)
+      Level 3
+        ✕ Can interrupt render (time slicing) (7747 ms)
+        ✕ Can branch state (wip state) (6473 ms)
+    With useDeferredValue
+      Level 1
+        ✓ No tearing finally on update (9384 ms)
+        ✓ No tearing finally on mount (4445 ms)
+      Level 2
+        ✓ No tearing temporarily on update (13416 ms)
+        ✓ No tearing temporarily on mount (4362 ms)
+  apollo-client
+    With useTransition
+      Level 1
+        ✓ No tearing finally on update (7493 ms)
+        ✓ No tearing finally on mount (4516 ms)
+      Level 2
+        ✕ No tearing temporarily on update (11454 ms)
+        ✓ No tearing temporarily on mount (4418 ms)
+      Level 3
+        ✕ Can interrupt render (time slicing) (6964 ms)
+        ✕ Can branch state (wip state) (3415 ms)
+    With useDeferredValue
+      Level 1
+        ✓ No tearing finally on update (9031 ms)
+        ✓ No tearing finally on mount (4441 ms)
+      Level 2
+        ✓ No tearing temporarily on update (12221 ms)
+        ✓ No tearing temporarily on mount (4427 ms)
+  use-context-selector
+    With useTransition
+      Level 1
+        ✓ No tearing finally on update (5339 ms)
+        ✓ No tearing finally on mount (13383 ms)
+      Level 2
+        ✓ No tearing temporarily on update (8403 ms)
+        ✓ No tearing temporarily on mount (13280 ms)
+      Level 3
+        ✓ Can interrupt render (time slicing) (3368 ms)
+        ✓ Can branch state (wip state) (8014 ms)
+    With useDeferredValue
+      Level 1
+        ✓ No tearing finally on update (14356 ms)
+        ✓ No tearing finally on mount (6380 ms)
+      Level 2
+        ✓ No tearing temporarily on update (18443 ms)
+        ✓ No tearing temporarily on mount (6289 ms)
+
+  ● react-query › With useTransition › Level 3 › Can interrupt render (time slicing)
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 300
+    Received:   1008.8
+
+      127 |           // it triggers triple clicks, so 300ms on average.
+      128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
+    > 129 |           expect(avg).toBeLessThan(300);
+          |                       ^
+      130 |         });
+      131 |
+      132 |         it('Can branch state (wip state)', async () => {
+
+      at Object.toBeLessThan (__tests__/all_spec.js:129:23)
+
+  ● react-query › With useTransition › Level 3 › Can branch state (wip state)
+
+    TimeoutError: Element #pending (text: "Pending...") not found
+    waiting for function failed: timeout 2000ms exceeded
+
+      143 |           await page.click('#transitionIncrement');
+      144 |           // wait for pending
+    > 145 |           await expect(page).toMatchElement('#pending', {
+          |           ^
+      146 |             text: 'Pending...',
+      147 |             timeout: 2 * 1000,
+      148 |           });
+
+      at Object.<anonymous> (__tests__/all_spec.js:145:11)
+
+  ● apollo-client › With useTransition › Level 2 › No tearing temporarily on update
+
+    expect(received).resolves.not.toMatch(expected)
+
+    Expected pattern: not /TEARED/
+    Received string:      "apollo-client TEARED TEARED TEARED TEARED TEARED"
+
+      89 |           // check if there's inconsistency during update
+      90 |           // see useCheckTearing() in src/common.js
+    > 91 |           await expect(page.title()).resolves.not.toMatch(/TEARED/);
+         |                                                   ^
+      92 |         });
+      93 |
+      94 |         it('No tearing temporarily on mount', async () => {
+
+      at Object.toMatch (node_modules/expect/build/index.js:166:22)
+      at Object.toMatch (__tests__/all_spec.js:91:51)
+
+  ● apollo-client › With useTransition › Level 3 › Can interrupt render (time slicing)
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 300
+    Received:   751
+
+      127 |           // it triggers triple clicks, so 300ms on average.
+      128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
+    > 129 |           expect(avg).toBeLessThan(300);
+          |                       ^
+      130 |         });
+      131 |
+      132 |         it('Can branch state (wip state)', async () => {
+
+      at Object.toBeLessThan (__tests__/all_spec.js:129:23)
+
+  ● apollo-client › With useTransition › Level 3 › Can branch state (wip state)
+
+    expect(received).resolves.toBe(expected) // Object.is equality
+
+    Expected: "1"
+    Received: "2"
+
+      148 |           });
+      149 |           // Make sure that while isPending true, previous state displayed
+    > 150 |           await expect(page.evaluate(() => document.querySelector('#mainCount').innerHTML)).resolves.toBe('1');
+          |                                                                                                      ^
+      151 |           await expect(page.evaluate(() => document.querySelector('.count:first-of-type').innerHTML)).resolves.toBe('1');
+      152 |           // click normal double button
+      153 |           await page.click('#normalDouble');
+
+      at Object.toBe (node_modules/expect/build/index.js:166:22)
+      at Object.toBe (__tests__/all_spec.js:150:102)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 25 passed, 30 total
+Snapshots:   0 total
+Time:        242.676 s
+Ran all test suites.
+Test results written to: outfile.json

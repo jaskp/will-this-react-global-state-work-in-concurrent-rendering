@@ -1,6 +1,8 @@
 module.exports = {
   launch: {
-    headless: false,
+    headless: true,
+    executablePath: '/usr/bin/google-chrome',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
   server: {
     command: 'http-server dist',

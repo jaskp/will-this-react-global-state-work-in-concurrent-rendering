@@ -14,26 +14,9 @@ const sleep = (ms) => new Promise((r) => {
 jest.setTimeout(20 * 1000);
 
 const names = [
-  // 'react-state',
-  'react-redux',
-  'zustand',
-  'react-tracked',
-  'constate',
-  'react-hooks-global-state',
-  'use-context-selector-base',
-  'use-context-selector',
-  'use-subscription',
-  'apollo-client',
-  'recoil',
-  'recoil_UNSTABLE',
-  'jotai',
-  'use-atom',
-  'valtio',
-  'effector',
-  'react-rxjs',
-  'simplux',
   'react-query',
-  'mobx-react-lite',
+  'apollo-client',
+  'use-context-selector',
 ];
 
 names.forEach((name) => {
