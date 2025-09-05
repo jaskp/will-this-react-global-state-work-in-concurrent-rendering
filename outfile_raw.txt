@@ -1,128 +1,105 @@
   console.log
-    apollo-client [ 7, 939, 950, 949, 950 ]
+    react-query [ 1012, 1009, 1008, 1008, 1007 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
   console.log
-    use-context-selector [ 27, 163, 179, 185, 183 ]
+    apollo-client [ 8, 946, 933, 934, 934 ]
 
       at Object.log (__tests__/all_spec.js:124:19)
 
-FAIL __tests__/all_spec.js (180.684 s)
+  console.log
+    use-context-selector [ 6, 164, 182, 142, 174 ]
+
+      at Object.log (__tests__/all_spec.js:124:19)
+
+FAIL __tests__/all_spec.js (242.639 s)
   react-query
     With useTransition
       Level 1
-        ✕ No tearing finally on update (1626 ms)
-        ✕ No tearing finally on mount (1212 ms)
+        ✓ No tearing finally on update (8325 ms)
+        ✓ No tearing finally on mount (4507 ms)
       Level 2
-        ✕ No tearing temporarily on update (1124 ms)
-        ✕ No tearing temporarily on mount (1125 ms)
+        ✓ No tearing temporarily on update (12737 ms)
+        ✓ No tearing temporarily on mount (4392 ms)
       Level 3
-        ✕ Can interrupt render (time slicing) (1099 ms)
-        ✕ Can branch state (wip state) (1126 ms)
+        ✕ Can interrupt render (time slicing) (7747 ms)
+        ✕ Can branch state (wip state) (6473 ms)
     With useDeferredValue
       Level 1
-        ✕ No tearing finally on update (1128 ms)
-        ✕ No tearing finally on mount (1137 ms)
+        ✓ No tearing finally on update (9384 ms)
+        ✓ No tearing finally on mount (4445 ms)
       Level 2
-        ✕ No tearing temporarily on update (1131 ms)
-        ✕ No tearing temporarily on mount (1104 ms)
+        ✓ No tearing temporarily on update (13416 ms)
+        ✓ No tearing temporarily on mount (4362 ms)
   apollo-client
     With useTransition
       Level 1
-        ✓ No tearing finally on update (7797 ms)
-        ✓ No tearing finally on mount (4549 ms)
+        ✓ No tearing finally on update (7493 ms)
+        ✓ No tearing finally on mount (4516 ms)
       Level 2
-        ✕ No tearing temporarily on update (11501 ms)
-        ✓ No tearing temporarily on mount (4394 ms)
+        ✕ No tearing temporarily on update (11454 ms)
+        ✓ No tearing temporarily on mount (4418 ms)
       Level 3
-        ✕ Can interrupt render (time slicing) (7027 ms)
-        ✕ Can branch state (wip state) (3413 ms)
+        ✕ Can interrupt render (time slicing) (6964 ms)
+        ✕ Can branch state (wip state) (3415 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (8992 ms)
-        ✓ No tearing finally on mount (4461 ms)
+        ✓ No tearing finally on update (9031 ms)
+        ✓ No tearing finally on mount (4441 ms)
       Level 2
-        ✓ No tearing temporarily on update (13321 ms)
-        ✓ No tearing temporarily on mount (4389 ms)
+        ✓ No tearing temporarily on update (12221 ms)
+        ✓ No tearing temporarily on mount (4427 ms)
   use-context-selector
     With useTransition
       Level 1
-        ✓ No tearing finally on update (5437 ms)
-        ✓ No tearing finally on mount (13432 ms)
+        ✓ No tearing finally on update (5339 ms)
+        ✓ No tearing finally on mount (13383 ms)
       Level 2
-        ✓ No tearing temporarily on update (8432 ms)
-        ✓ No tearing temporarily on mount (13301 ms)
+        ✓ No tearing temporarily on update (8403 ms)
+        ✓ No tearing temporarily on mount (13280 ms)
       Level 3
-        ✓ Can interrupt render (time slicing) (3442 ms)
-        ✓ Can branch state (wip state) (7876 ms)
+        ✓ Can interrupt render (time slicing) (3368 ms)
+        ✓ Can branch state (wip state) (8014 ms)
     With useDeferredValue
       Level 1
-        ✓ No tearing finally on update (14337 ms)
-        ✓ No tearing finally on mount (6391 ms)
+        ✓ No tearing finally on update (14356 ms)
+        ✓ No tearing finally on mount (6380 ms)
       Level 2
-        ✓ No tearing temporarily on update (18455 ms)
-        ✓ No tearing temporarily on mount (6306 ms)
-
-  ● react-query › With useTransition › Level 1 › No tearing finally on update
-
-
-
-
-
-  ● react-query › With useTransition › Level 1 › No tearing finally on mount
-
-
-
-
-
-  ● react-query › With useTransition › Level 2 › No tearing temporarily on update
-
-
-
-
-
-  ● react-query › With useTransition › Level 2 › No tearing temporarily on mount
-
-
-
-
+        ✓ No tearing temporarily on update (18443 ms)
+        ✓ No tearing temporarily on mount (6289 ms)
 
   ● react-query › With useTransition › Level 3 › Can interrupt render (time slicing)
 
+    expect(received).toBeLessThan(expected)
 
+    Expected: < 300
+    Received:   1008.8
 
+      127 |           // it triggers triple clicks, so 300ms on average.
+      128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
+    > 129 |           expect(avg).toBeLessThan(300);
+          |                       ^
+      130 |         });
+      131 |
+      132 |         it('Can branch state (wip state)', async () => {
 
+      at Object.toBeLessThan (__tests__/all_spec.js:129:23)
 
   ● react-query › With useTransition › Level 3 › Can branch state (wip state)
 
+    TimeoutError: Element #pending (text: "Pending...") not found
+    waiting for function failed: timeout 2000ms exceeded
 
+      143 |           await page.click('#transitionIncrement');
+      144 |           // wait for pending
+    > 145 |           await expect(page).toMatchElement('#pending', {
+          |           ^
+      146 |             text: 'Pending...',
+      147 |             timeout: 2 * 1000,
+      148 |           });
 
-
-
-  ● react-query › With useDeferredValue › Level 1 › No tearing finally on update
-
-
-
-
-
-  ● react-query › With useDeferredValue › Level 1 › No tearing finally on mount
-
-
-
-
-
-  ● react-query › With useDeferredValue › Level 2 › No tearing temporarily on update
-
-
-
-
-
-  ● react-query › With useDeferredValue › Level 2 › No tearing temporarily on mount
-
-
-
-
+      at Object.<anonymous> (__tests__/all_spec.js:145:11)
 
   ● apollo-client › With useTransition › Level 2 › No tearing temporarily on update
 
@@ -147,7 +124,7 @@ FAIL __tests__/all_spec.js (180.684 s)
     expect(received).toBeLessThan(expected)
 
     Expected: < 300
-    Received:   759
+    Received:   751
 
       127 |           // it triggers triple clicks, so 300ms on average.
       128 |           const avg = delays.reduce((a, b) => a + b) / delays.length;
@@ -178,8 +155,8 @@ FAIL __tests__/all_spec.js (180.684 s)
       at Object.toBe (__tests__/all_spec.js:150:102)
 
 Test Suites: 1 failed, 1 total
-Tests:       13 failed, 17 passed, 30 total
+Tests:       5 failed, 25 passed, 30 total
 Snapshots:   0 total
-Time:        180.74 s
+Time:        242.676 s
 Ran all test suites.
 Test results written to: outfile.json

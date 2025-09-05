@@ -91,21 +91,21 @@ yarn jest:update
 ```
  at Object.log (__tests__/all_spec.js:124:19)
 ct-query
-   ✕ No tearing finally on update (1626 ms)
-   ✕ No tearing temporarily on update (1124 ms)
-   ✕ Can interrupt render (time slicing) (1099 ms)
+   ✓ No tearing finally on update (8325 ms)
+   ✓ No tearing temporarily on update (12737 ms)
+   ✕ Can interrupt render (time slicing) (7747 ms)
  Level 1
  Level 2
 llo-client
-   ✓ No tearing finally on update (7797 ms)
-   ✕ No tearing temporarily on update (11501 ms)
-   ✕ Can interrupt render (time slicing) (7027 ms)
+   ✓ No tearing finally on update (7493 ms)
+   ✕ No tearing temporarily on update (11454 ms)
+   ✕ Can interrupt render (time slicing) (6964 ms)
  Level 1
  Level 2
 -context-selector
-   ✓ No tearing finally on update (5437 ms)
-   ✓ No tearing temporarily on update (8432 ms)
-   ✓ Can interrupt render (time slicing) (3442 ms)
+   ✓ No tearing finally on update (5339 ms)
+   ✓ No tearing temporarily on update (8403 ms)
+   ✓ Can interrupt render (time slicing) (3368 ms)
  Level 1
  Level 2
 
@@ -116,16 +116,16 @@ llo-client
 <tr><th>Test</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
 	<tr>
 		<th><a href="https://react-query.tanstack.com/">react-query</a></th>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
 		<td>:x:</td>
 		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
-		<td>:x:</td>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
+		<td>:white_check_mark:</td>
 	</tr>
 	<tr>
 		<th><a href="https://github.com/apollographql/apollo-client">apollo-client</a></th>
